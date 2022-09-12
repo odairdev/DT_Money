@@ -31,7 +31,11 @@ export const SearchButton = styled.button`
   cursor: pointer;
   gap: 0.5rem;
 
-  &:hover {
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &:not(:disabled):hover {
     transition: 0.2s;
     background-color: ${(props) => props.theme["green-500"]};
     border: 1px solid ${(props) => props.theme["green-500"]};
